@@ -1,8 +1,10 @@
-﻿using UltimEx;
-namespace ClassLibrary1
+﻿namespace LibraryFunctions
 {
-    public class Class1
+    public static class Functions
     {
-
+        public static bool Validate(int num)
+        {
+            return num % 2 == 0;
+        }
     }
 }
