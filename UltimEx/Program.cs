@@ -42,6 +42,10 @@ namespace UltimEx
                     Console.ResetColor();
                     break;
                 case 3:
+                    num = LibraryFunctions.Functions.Random();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"Your random number is: {num}");
+                    Console.ResetColor();        
                     break;
                 case 4:
                     break;
