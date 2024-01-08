@@ -11,6 +11,7 @@ namespace UltimEx
             const string Odd = "ODD";
             const string Ask = "Enter a number";
             const string Text = "Enter a text";
+            const string Exit = "Exit";
 
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(Menu);
@@ -22,7 +23,11 @@ namespace UltimEx
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(Ask);
                     Console.ResetColor();
-                    num = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        num = Convert.ToInt32(Console.ReadLine());
+
+                    } while (num < 0);
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine(LibraryFunctions.Functions.Validate(num) == true ? Even : Odd);
                     Console.ResetColor();
@@ -31,11 +36,20 @@ namespace UltimEx
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(Ask);
                     Console.ResetColor();
-                    num = Convert.ToInt32(Console.ReadLine());
+                    do
+                    {
+                        num = Convert.ToInt32(Console.ReadLine());
+
+                    } while (num < 0);
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(Ask);
                     Console.ResetColor();
-                    int pow = Convert.ToInt32(Console.ReadLine());
+                    int pow;
+                    do
+                    {
+                        pow = Convert.ToInt32(Console.ReadLine());
+
+                    } while (pow < 0); 
                     double result = LibraryFunctions.Functions.Pow(num, pow);
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine($"The result of the pow is: {result}");
@@ -48,8 +62,17 @@ namespace UltimEx
                     Console.ResetColor();        
                     break;
                 case 4:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(Text);
+                    Console.ResetColor();
+                    string texto = Console.ReadLine();
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    LibraryFunctions.Functions.ContarVocalsConsonants(texto);
                     break;
-                case 5: 
+                default:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine(Exit);
+                    Console.ResetColor();
                     break;
             }
         }
