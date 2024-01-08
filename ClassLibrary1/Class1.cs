@@ -6,5 +6,10 @@
         {
             return num % 2 == 0;
         }
+        public static double Pow(int num, int pow)
+        {
+            return Math.Pow(num, pow);
+        }
     }
+
 }
