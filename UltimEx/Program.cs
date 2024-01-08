@@ -28,6 +28,18 @@ namespace UltimEx
                     Console.ResetColor();
                     break;
                 case 2:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(Ask);
+                    Console.ResetColor();
+                    num = Convert.ToInt32(Console.ReadLine());
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(Ask);
+                    Console.ResetColor();
+                    int pow = Convert.ToInt32(Console.ReadLine());
+                    double result = LibraryFunctions.Functions.Pow(num, pow);
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.WriteLine($"The result of the pow is: {result}");
+                    Console.ResetColor();
                     break;
                 case 3:
                     break;
@@ -39,3 +51,4 @@ namespace UltimEx
         }
     }
 }
+
