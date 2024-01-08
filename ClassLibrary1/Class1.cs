@@ -10,6 +10,11 @@
         {
             return Math.Pow(num, pow);
         }
+        public static int Random()
+        {
+            Random rand = new Random();
+            return rand.Next(-1001, 1001);
+        }
     }
 
 }
